@@ -35,7 +35,7 @@ this addAction ["Refill Water Source", {
 	_currentWaterLevel = _object getVariable ["currentWaterLevel", 20];
 	_maxWaterLevel = _object getVariable ["maxWaterLevel", 20];
 
-	if(_currentWaterLevel >= _maxWaterLevel) exitWith {
+	if(_currentWaterLevel == _maxWaterLevel) exitWith {
 		hint format ["This water source is at the max capacity of %1", _maxWaterLevel];
 		sleep 3;
 		hintSilent "";
